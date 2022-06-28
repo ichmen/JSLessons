@@ -78,5 +78,8 @@
     "unicode-property-aliases-ecmascript": "^2.0.0",
     "update-browserslist-db": "^1.0.4"
   },
-  "description": ""
+  "description": "",
+  "jest": {
+    "collectCoverage": true
+  }
 }
