@@ -1,3 +1,27 @@
-export const getSquaredArray = arr => arr.map(el => el * el);
-export const getOddNumbers = arr => arr.filter(el => el % 2);
-export default (a, b) => a + b;
+/* eslint-disable default-case */
+
+export const calc = expression => {
+  if (typeof expression !== 'string') {
+    return null;
+  }
+
+  const [a, operation, b] = expression.split(' ');
+  let result;
+
+  switch (operation) {
+    case '+':
+      result = +a + +b;
+      break;
+    case '-':
+      result = +a - +b;
+      break;
+    case '*':
+      result = +a * +b;
+      break;
+    case '/':
+      result = +a / +b;
+      break;
+  }
+
+  return `${expression} = ${result}`;
+};
