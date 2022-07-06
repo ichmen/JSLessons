@@ -1,15 +1,3 @@
-export function clearList() {
-  const searchElem = document.querySelector('.categories');
-  searchElem.innerHTML = '';
-  // searchElem.textContent = `<button>${buttonText}</button>`;
-  // console.dir(searchElem);
-  // searchElem.textContent = String(text);
-  // document.querySelector('.title').textContent = String(text);
+export function createButton(buttonText) {
+  newdocument.createElement('button');
 }
-// setButton('AAAAAA');
-
-// console.log(getTitle());
-// console.log(getDescription());
-// console.log(getPlans());
-// console.log(getGoal());
-// export { setTitle };
