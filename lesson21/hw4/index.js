@@ -1,10 +1,13 @@
-function setTitle(text) {
-  document.querySelector('.title').textContent = String(text);
+export function setTitle(text) {
+  const searchElem = document.querySelector('.title');
+  // console.log(searchElem);
+  searchElem.textContent = String(text);
+  // document.querySelector('.title').textContent = String(text);
 }
-setTitle('AAAAAA');
+// setTitle('AAAAAA');
 
 // console.log(getTitle());
 // console.log(getDescription());
 // console.log(getPlans());
 // console.log(getGoal());
-export { setTitle };
+// export { setTitle };
