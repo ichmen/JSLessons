@@ -3,8 +3,8 @@ export function finishForm() {
   searchItem.type = 'password';
   const searchForm = document.querySelector('.login-form');
   const newImport = document.createElement('input');
-  newImport.name = 'login';
   newImport.type = 'text';
+  newImport.name = 'login';
   searchForm.prepend(newImport);
 }
 finishForm();
