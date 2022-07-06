@@ -1,5 +1,5 @@
 function setTitle(text) {
-  document.querySelector('.title').textContent = text;
+  document.querySelector('.title').textContent = String(text);
 }
 setTitle('AAAAAA');
 
