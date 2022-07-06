@@ -5,9 +5,9 @@ function getItemsList() {
 }
 
 function getItemsArray() {
-  const elementsArray = document.querySelectorAll('.tool');
+  const elementsArray = Array.from(document.querySelectorAll('.tool'));
   console.dir(elementsArray);
-  return Array.from(elementsArray);
+  return elementsArray;
 }
 
 getItemsList();
