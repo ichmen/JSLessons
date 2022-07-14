@@ -1,12 +1,24 @@
-export const addImage = (imgSrc, callback) => {
+const addImage = (imgSrc, callback) => {
   const container = document.querySelector('.page');
   const image = document.createElement('img');
   image.setAttribute('src', imgSrc);
   image.setAttribute('alt', 'some image');
-  image.addEventListener('load', onImageLoaded(null, image));
-  image.addEventListener('error', onImageLoaded('Image load is failed'));
+  image.addEventListener('error', callback('Image load is faile'));
+  // image.addEventListener('error', onError);
+  // image.addEventListener('error', event => {
+  //   console.log(event);
+  // });
+  // });
   container.append(image);
+  image.addEventListener('load', callback(null, image));
+  // image.addEventListener('load', callback(null, image));
 
+  // function onImageLoaded() {
+  //   callback(null, image);
+  // }
+  // function onError() {
+  //   callback('Image load is failed');
+  // }
   // put your code here
 };
 
