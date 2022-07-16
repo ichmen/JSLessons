@@ -20,9 +20,9 @@ function request(url) {
 
 function renderData(userData) {
   console.log(userData);
-  const { login, avatar_url, location } = userData;
+  const { name, avatar_url, location } = userData;
   avatarElem.src = avatar_url;
-  userNameElem.textContent = login;
+  userNameElem.textContent = name;
   userLocationElem.textContent = location;
   console.log(login, avatar_url, location);
 }
