@@ -23,6 +23,6 @@ function renderData(userData) {
   const { login, avatar_url, location } = userData;
   avatarElem.src = avatar_url;
   userNameElem.textContent = login;
-  userLocationElem.textContent = location ? `From ${location}` : '';
+  userLocationElem.textContent = location;
   console.log(login, avatar_url, location);
 }
