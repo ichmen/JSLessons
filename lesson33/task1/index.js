@@ -19,7 +19,7 @@ function request(url) {
 }
 
 function renderData(userData) {
-  console.log(userData);
+  // console.log(userData);
   const { name, avatar_url, location } = userData;
   avatarElem.src = avatar_url;
   userNameElem.textContent = name;
