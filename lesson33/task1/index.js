@@ -24,5 +24,5 @@ function renderData(userData) {
   avatarElem.src = avatar_url;
   userNameElem.textContent = name;
   userLocationElem.textContent = location;
-  console.log(login, avatar_url, location);
+  // console.log(login, avatar_url, location);
 }
