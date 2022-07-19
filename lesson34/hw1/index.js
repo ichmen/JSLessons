@@ -12,8 +12,7 @@ submitButton.addEventListener('click', submitHandler);
 
 function submitHandler(event) {
   event.preventDefault();
-  postData(Object.fromEntries(new FormData(form)));
-  form.reset();
+  postData(Object.fromEntries(new FormData(form))).then(form.reset());
 }
 function changeHandler(event) {
   if (inputEmail.reportValidity() && inputName.reportValidity() && inputPassword.reportValidity()) {
@@ -23,7 +22,7 @@ function changeHandler(event) {
   }
 }
 function postData(dataToPost) {
-  fetch(baseUrl, {
+  return fetch(baseUrl, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
