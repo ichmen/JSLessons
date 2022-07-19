@@ -5,16 +5,16 @@ const inputPassword = document.querySelector('input[name="password"]');
 const form = document.querySelector('.login-form');
 const baseUrl = 'https://62d56536d4406e523559e20d.mockapi.io/avi/v1/userLogin';
 
-inputEmail.addEventListener('change', changeHandler);
-inputName.addEventListener('change', changeHandler);
-inputPassword.addEventListener('change', changeHandler);
+inputEmail.addEventListener('input', changeHandler);
+inputName.addEventListener('input', changeHandler);
+inputPassword.addEventListener('input', changeHandler);
 submitButton.addEventListener('click', submitHandler);
 
 function submitHandler(event) {
   event.preventDefault();
   postData(Object.fromEntries(new FormData(form)));
+  form.reset();
 }
-
 function changeHandler(event) {
   if (inputEmail.reportValidity() && inputName.reportValidity() && inputPassword.reportValidity()) {
     submitButton.removeAttribute('disabled');
