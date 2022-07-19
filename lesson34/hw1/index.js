@@ -12,14 +12,15 @@ submitButton.addEventListener('click', submitHandler);
 
 function submitHandler(event) {
   event.preventDefault();
-  postData(Object.fromEntries(new FormData(form))).then(form.reset());
+  postData(Object.fromEntries(new FormData(form)));
 }
 function changeHandler(event) {
-  if (inputEmail.reportValidity() && inputName.reportValidity() && inputPassword.reportValidity()) {
+  if (form.reportValidity()) {
     submitButton.removeAttribute('disabled');
   } else {
     submitButton.setAttribute('disabled', true);
   }
+  event.target.focus();
 }
 function postData(dataToPost) {
   return fetch(baseUrl, {
@@ -30,5 +31,6 @@ function postData(dataToPost) {
     body: JSON.stringify(dataToPost),
   })
     .then(res => res.json())
-    .then(data => alert(JSON.stringify(data)));
+    .then(data => alert(JSON.stringify(data)))
+    .then(form.reset());
 }
