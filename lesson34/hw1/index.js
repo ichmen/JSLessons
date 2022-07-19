@@ -31,6 +31,9 @@ function postData(dataToPost) {
     body: JSON.stringify(dataToPost),
   })
     .then(res => res.json())
-    .then(data => alert(JSON.stringify(data)))
-    .then(form.reset());
+    .then(data => {
+      form.reset();
+      return data;
+    })
+    .then(data => alert(JSON.stringify(data)));
 }
