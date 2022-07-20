@@ -14,9 +14,9 @@ renderData(defaultUser);
 buttonElem.addEventListener('click', buttonHandler);
 
 function buttonHandler() {
+  spinner.classList.remove('spinner_hidden');
   request(baseUrl + inputElem.value)
     .then(data => {
-      spinner.classList.remove('spinner_hidden');
       renderData(data);
       return data.repos_url;
     })
