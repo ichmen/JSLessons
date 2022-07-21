@@ -3,7 +3,7 @@ import { setTask, getTasks, changeTask, deleteTask } from './gateWay.js';
 
 const taskText = document.querySelector('.task-input');
 
-export function buttonProcessor(event) {
+export function buttonProcessor() {
   if (!taskText.value) {
     return;
   }
